@@ -106,10 +106,15 @@
         color: $color2;
       }
     }
-    form.wide {
+    .wide {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
     }
     select {
       border-radius: 0;
