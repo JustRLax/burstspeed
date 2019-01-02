@@ -1,0 +1,36 @@
+//Header
+.nav {
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
+  ul {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255,255,255,.9);
+    box-shadow: $shadow;
+    @include breakpoint(700px) {
+      font-size: 80%;
+      padding: 8px 12px;
+    }
+  }
+  li {
+    display: inline-block;
+    margin: 0 40px 0 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  a {
+    color: $color1;
+    font-family: $font-2;
+    text-transform: lowercase;
+    font-size: 1.25em;
+    letter-spacing: 2px;
+    transition: $dt;
+    text-transform: uppercase;
+    &:hover {
+      color: $color2;
+    }
+  }
+}

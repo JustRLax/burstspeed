@@ -1,0 +1,45 @@
+//Footer
+.footer {
+  margin-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  .container {
+    position: relative;
+    padding-top: 20px;
+    max-width: 700px;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: $main-grad-2;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  p {
+    font-size: .875em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .design {
+    color: $white;
+    font-size: .875em;
+    transition: $dt;
+    &:hover {
+      color: $color2;
+    }
+    span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      text-indent: -999em;
+      background: red;
+      margin-left: 5px;
+      background: url(../resources/jlax86.png) no-repeat center center;
+      background-size: contain;
+    }
+  }
+}

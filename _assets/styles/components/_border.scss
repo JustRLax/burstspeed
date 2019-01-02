@@ -1,0 +1,53 @@
+//Border
+.border-x{
+  width: 100%;
+  height: 20px;
+  left: 0;
+  top: 0;
+  background: $main-grad;
+  position: fixed;
+  z-index: 1000;
+  @include breakpoint(600px) {
+    height: 10px;
+  }
+  &:before {
+    content: '';
+    width: 100%;
+    height: 20px;
+    top: calc(100vh - 20px);
+    background: $main-grad;
+    position: fixed;
+    left: 0;
+    @include breakpoint(600px) {
+      height: 10px;
+      top: calc(100vh - 10px);
+    }
+  }
+}
+.border-y {
+  display: block;
+  width: 20px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: $color1;
+  transform: scale(var(--bg2));
+  @include breakpoint(600px) {
+    width: 10px;
+  }
+  &:before {
+    content: '';
+    width: 20px;
+    height: 100%;
+    position: fixed;
+    left: calc(100vw - 20px);
+    top: 0;
+    background: $color2;
+    @include breakpoint(600px) {
+      width: 10px;
+      left: calc(100vw - 10px);
+    }
+  }
+}

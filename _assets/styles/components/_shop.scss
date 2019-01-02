@@ -1,0 +1,142 @@
+//Shop
+.shop {
+  @include breakpoint(800px) {
+    padding-top: 80px;
+  }
+  &__products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-top: 40px;
+  }
+  .heading {
+    margin-left: 20px;
+    @include breakpoint(800px) {
+      margin-left: 10px;
+    }
+    @include breakpoint(600px) {
+      margin-left: 0;
+    }
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background: $main-grad;
+    text-align: center;
+    &:after {
+      content: '';
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      background: url(../resources/magnify.svg) no-repeat center center;
+      z-index: 20;
+      transition: $dt;
+    }
+    &:before {
+      @include content100;
+      background: $main-grad-2;
+      z-index: 0;
+      transition: $dt;
+      opacity: 0;
+
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+      &:after {
+        transform: scale(1.05);
+      }
+    }
+    img {
+      width: 100%;
+      margin: 0;
+      display: inline-block;
+      backface-visibility: hidden;
+      position: relative;
+      z-index: 10;
+    }
+  }
+  &__image {
+    width: 100%;
+    position: relative;
+  }
+  &__item {
+    width: calc((100% / 3) - 40px);
+    margin: 0 20px 80px;
+    @include breakpoint(1000px) {
+      width: calc((100% / 2) - 40px);
+    }
+    @include breakpoint(800px) {
+      width: calc((100% / 2) - 20px);
+      margin: 0 10px 60px;
+    }
+    @include breakpoint(650px) {
+      width: 100%;
+      margin: 0 0 80px;
+    }
+    .content {
+      margin-top: 20px;
+      width: 100%;
+      h3 {
+        color: $color1;
+        font-size: 1.5em;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .description {
+        @include p();
+      }
+    }
+    .details {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid $color2;
+      padding-top: 15px;
+      margin-top: 15px;
+      .price {
+        font-size: 1.75em;
+        color: $color2;
+      }
+    }
+    form.wide {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    select {
+      border-radius: 0;
+      outline: none;
+      background: none;
+      border: 1px solid $color2;
+      color: $color2;
+      font-size: 1.125em;
+      padding: 10px;
+      width: calc(100% - 160px);
+    }
+    input[name="submit"] {
+      font-family: $font-1;
+      padding: 10px 20px;
+      background: $main-grad;
+      color: $white;
+      font-weight: 700;
+      font-size: .875em;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      transition: $dt;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

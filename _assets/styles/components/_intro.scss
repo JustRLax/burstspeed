@@ -1,0 +1,41 @@
+//Intro
+.intro {
+  width: 100%;
+  position: relative;
+  &__bg {
+    width: 100%;
+    position: relative;
+  }
+  &__content {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 100;
+    @include breakpoint(1400px, min-width) {
+      bottom: 100px;
+    }
+    @include breakpoint(801px, min-width) {
+      @include breakpoint(850px, max-height) {
+        bottom: 150px;
+      }
+    }
+    @include breakpoint(800px) {
+      bottom: -40px;
+    }
+    .container {
+      max-width: 480px;
+      text-align: center;
+    }
+  }
+  &__image {
+    display: inline-block;
+    @include breakpoint(800px) {
+      width: 300px;
+    }
+    @include breakpoint(500px) {
+      width: 250px;
+    }
+  }
+}

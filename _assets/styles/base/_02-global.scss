@@ -1,0 +1,86 @@
+// Variables for global use
+//**** Colors
+$white: #fff;
+$color1: #4FB2E3;
+$color2: #D4559B;
+
+//Selection
+::-moz-selection {
+  background: $color1;
+  color: $white;
+}
+::selection {
+  background: $color1;
+  color: $white;
+}
+
+//Shadows
+$shadow: 0 0 40px 0 rgba(0,0,0,.20);
+$shadow-lrg: 0 20px 60px 0 rgba(0,0,0,.50);
+$shadow-sm: 0 6px 20px 0 rgba(0,0,0,.1);
+$shadow-hov: 0 10px 40px 0 rgba(0,0,0,.25);
+
+//Gradient
+$black-grad: linear-gradient(-180deg, rgba(0,0,0,.2) 30%, rgba(0,0,0,1) 100%);
+$black-grad-2: linear-gradient(-180deg, rgba(0,0,0,.7) 30%, rgba(0,0,0,.9) 79%);
+$black-grad-3: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+
+$main-grad: linear-gradient(130deg, RGBA(79, 178, 227, 1.00) 0%, RGBA(212, 85, 155, 1.00) 83%);
+$main-grad-2: linear-gradient(130deg, RGBA(212, 85, 155, 1.00) 0%, RGBA(79, 178, 227, 1.00) 83%);
+
+//**** Typography
+$font-1: 'Source Sans Pro', sans-serif;
+$font-2: 'Anton', sans-serif;
+
+
+//**** Transitions
+$transition: .3s all ease-in-out;
+$dt: .3s all ease-in-out;
+
+//**** Animations
+@include setup-fadeInUp;
+@include setup-fadeIn;
+@include setup-fadeOut;
+@include setup-fadeInLeft;
+@include setup-fadeInRight;
+@include setup-fadeInDown;
+@include setup-fadeOutDown;
+
+//Containers
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+body {
+  background: #000;
+}
+.border {
+  width: 100%;
+  height: 20px;
+}
+
+//Button
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  letter-spacing: 2px;
+  background: $color1;
+  text-transform: uppercase;
+  font-family: $font-1;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: $white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: $transition;
+}
+
+//IMG FUll
+.img-full {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}

@@ -1,0 +1,73 @@
+//Form
+.contact {
+  padding-top: 100px;
+  .container {
+    max-width: 680px;
+  }
+}
+.form {
+  margin-top: 40px;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   form {
+     max-width: 680px;
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     position: relative;
+     z-index: 100;
+   }
+   fieldset {
+     width: 100%;
+     margin-bottom: 20px;
+   }
+   .button {
+     display: inline-block;
+     margin-top: 20px;
+     font-size: .875em;
+     font-weight: 700;
+     color: $white;
+     background: $main-grad-2;
+     &:hover {
+       opacity: .8;
+     }
+   }
+   label {
+     display: block;
+     width: 100%;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-family: $font-1;
+     font-size: 1em;
+     margin-bottom: 10px;
+   }
+   input,
+   textarea {
+     appearance: none;
+     outline: none;
+     border: none;
+   }
+   textarea {
+     resize: none;
+     height: 100px;
+     line-height: 1.4;
+   }
+   input[type="text"],
+   input[type="email"],
+   textarea {
+     width: 100%;
+     font-size: .875em;
+     background: rgba(255,255,255,.8);
+     color: $color2;
+     border: none;
+     border-radius: 4px;
+     padding: 10px;
+     transition: $transition;
+     &:focus {
+       color: #000;
+       background: rgba(255,255,255,.98);
+     }
+   }
+
+ }

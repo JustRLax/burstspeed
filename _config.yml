@@ -1,0 +1,18 @@
+---
+theme: jordandwhalen
+collections:
+  projects:
+    output: true
+    permalink: /projects/:slug/
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single-project
+include: ["_pages"]
+permalink: /:title/
+cloudinary_url: "https://res.cloudinary.com/justinlaxamana/"
+plugins:
+  - jekyll-inline-svg
+---
