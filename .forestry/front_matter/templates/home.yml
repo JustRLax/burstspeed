@@ -42,7 +42,7 @@ fields:
       name: image
       label: Image
   - type: field_group_list
-    name: dropdown
+    name: select_dropdown
     label: Dropdown
     fields:
     - type: text
