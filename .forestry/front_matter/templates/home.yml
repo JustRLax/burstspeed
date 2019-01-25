@@ -28,6 +28,19 @@ fields:
   - type: text
     name: button_id
     label: Button ID
+  - type: file
+    name: thumbnail
+    label: Thumbnail
+  - type: field_group_list
+    name: large_images
+    label: Large Images
+    fields:
+    - type: text
+      name: name
+      label: Name
+    - type: file
+      name: image
+      label: Image
   - type: field_group
     name: dropdown
     label: Select Dropdown
@@ -38,16 +51,6 @@ fields:
     - type: text
       name: name
       label: Name
-  - type: file
-    name: thumbnail
-    label: Thumbnail
-  - type: field_group_list
-    name: large_images
-    label: Large Images
-    fields:
-    - type: file
-      name: image
-      label: Image
 - type: field_group_list
   name: media
   label: Media
