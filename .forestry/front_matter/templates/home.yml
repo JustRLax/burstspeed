@@ -31,6 +31,9 @@ fields:
   - type: file
     name: thumbnail
     label: Thumbnail
+  - type: file
+    name: large_image
+    label: Large Image
   - type: field_group_list
     name: large_images
     label: Large Images
