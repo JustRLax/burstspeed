@@ -56,6 +56,9 @@ fields:
   name: media
   label: Media
   fields:
+  - type: text
+    name: name
+    label: Name
   - type: file
     label: Thumbnail
     description: 700 x 400px
