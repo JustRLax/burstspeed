@@ -1,0 +1,64 @@
+---
+label: Home
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Title
+  name: title
+- type: textarea
+  name: description
+  label: Meta Description
+- type: field_group_list
+  name: shop
+  label: Shop
+  fields:
+  - type: text
+    label: Name
+    name: name
+  - type: textarea
+    name: description
+    label: Description
+  - type: text
+    name: price
+    label: Price
+  - type: boolean
+    name: sold_out
+    label: Sold Out
+  - type: text
+    name: button_id
+    label: Button ID
+  - type: field_group
+    name: dropdown
+    label: Select Dropdown
+    fields:
+    - type: text
+      name: value
+      label: Value
+    - type: text
+      name: name
+      label: Name
+  - type: file
+    name: thumbnail
+    label: Thumbnail
+  - type: field_group_list
+    name: large_images
+    label: Large Images
+    fields:
+    - type: file
+      name: image
+      label: Image
+- type: field_group_list
+  name: media
+  label: Media
+  fields:
+  - type: file
+    label: Thumbnail
+    description: 700 x 400px
+    name: thumbnail
+  - type: file
+    name: large_image
+    label: Large Image
+- type: textarea
+  name: contact_info
+  label: Contact Info
