@@ -32,7 +32,7 @@
       position: absolute;
       right: 15px;
       top: 15px;
-      background: url(../resources/magnify.svg) no-repeat center center;
+      background: url(../resources/magnify-images.svg) no-repeat center center;
       z-index: 20;
       transition: $dt;
     }
@@ -94,7 +94,7 @@
       margin-top: 20px;
       width: 100%;
       h3 {
-        font-size: 1.125em;
+        font-size: 1.25em;
         line-height: 1.2;
         font-weight: 400;
         letter-spacing: 1px;
@@ -112,7 +112,7 @@
           }
         }
         .icon {
-          display: inline-block;
+          display: none;
           width: 25px;
           height: 25px;
           top: 8px;
