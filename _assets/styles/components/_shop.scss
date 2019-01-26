@@ -94,14 +94,40 @@
       margin-top: 20px;
       width: 100%;
       h3 {
-        color: $color1;
-        font-size: 1.5em;
+        font-size: 1.125em;
         line-height: 1.2;
-        font-weight: 700;
+        font-weight: 400;
+        letter-spacing: 1px;
         margin-bottom: 10px;
       }
+      .more {
+        transition: $dt;
+        color: $color1;
+        padding: 5px 0;
+        display: block;
+        &:hover {
+          color: $color2;
+          .a-image {
+            fill: $color1;
+          }
+        }
+        .icon {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          top: 8px;
+          margin-right: 5px;
+          position: relative;
+          z-index: 10;
+        }
+      }
       .description {
-        @include p();
+        p {
+          @include p();
+        }
+        ul {
+          @include ul();
+        }
       }
     }
     .details {

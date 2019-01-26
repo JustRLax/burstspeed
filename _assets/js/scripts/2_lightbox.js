@@ -23,6 +23,13 @@ $('.shop__image').each(function() {
     }
   });
 });
+
+//Trigger Lightbox
+$('.more').on("click", function(e){
+  $(this).closest('.content').siblings('.shop__image').find('.shop__link').trigger('click');
+  e.preventDefault();
+});
+
 $('.gallery').magnificPopup({
   type: 'image',
   fixedContentPos: true,
