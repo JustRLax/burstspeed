@@ -20,7 +20,6 @@
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-babel": "^7.0.1",
-    "gulp-cachebust": "0.0.10",
     "gulp-cloudinary-upload": "^1.0.0",
     "gulp-concat": "*",
     "gulp-connect": "^4.1.0",

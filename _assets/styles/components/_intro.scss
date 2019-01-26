@@ -6,6 +6,10 @@
     width: 100%;
     position: relative;
     background: #000;
+    min-height: 300px;
+    @include breakpoint(500px) {
+      min-height: 200px;
+    }
   }
   &__content {
     width: 100%;
