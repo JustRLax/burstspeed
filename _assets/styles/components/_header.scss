@@ -17,6 +17,13 @@
   li {
     display: inline-block;
     margin: 0 40px 0 0;
+    @include breakpoint(420px) {
+      margin: 0 20px 0 0;
+    }
+    @include breakpoint(380px) {
+      margin: 0 15px 0 0;
+      font-size: 80%;
+    }
     &:last-of-type {
       margin-right: 0;
     }
