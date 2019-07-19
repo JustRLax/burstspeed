@@ -48,7 +48,7 @@ body {
 }
 
 @mixin p($margin : 20px) {
-  font-size: .875em;
+  font-size: 1em;
   line-height: 1.6;
   margin-bottom: $margin;
 }
@@ -101,6 +101,17 @@ body {
     margin-bottom: 5px;
     font-size: .875em;
     line-height: 1.6;
+  }
+}
+@mixin ul-lg($margin : 10px) {
+  padding-left: 30px;
+  margin-bottom: $margin;
+  li {
+    list-style: circle;
+    padding-left: 0px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    line-height: 1.7;
   }
 }
 @mixin ol($margin : 20px) {

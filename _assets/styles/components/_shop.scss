@@ -1,8 +1,5 @@
 //Shop
 .shop {
-  @include breakpoint(800px) {
-    padding-top: 80px;
-  }
   &__products {
     width: 100%;
     display: flex;

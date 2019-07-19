@@ -15,22 +15,11 @@
     width: 100%;
     position: absolute;
     left: 50%;
-    bottom: 0;
     transform: translateX(-50%);
+    top: 10px;
     z-index: 100;
-    @include breakpoint(1400px, min-width) {
-      bottom: 100px;
-    }
-    @include breakpoint(801px, min-width) {
-      @include breakpoint(850px, max-height) {
-        bottom: 150px;
-      }
-    }
-    @include breakpoint(800px) {
-      bottom: -40px;
-    }
     .container {
-      max-width: 480px;
+      max-width: 280px;
       text-align: center;
     }
   }

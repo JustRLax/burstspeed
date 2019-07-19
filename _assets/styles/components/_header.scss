@@ -1,43 +1,251 @@
-//Header
-.nav {
+//Main-Header
+.main-header {
   width: 100%;
-  position: fixed;
-  z-index: 2000;
-  ul {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 10px 20px;
-    background: rgba(255,255,255,.9);
-    box-shadow: $shadow;
-    @include breakpoint(700px) {
-      font-size: 80%;
-      padding: 8px 12px;
+  position: relative;
+  backface-visibility: hidden;
+  z-index: 5000;
+  @include breakpoint(650px) {
+    padding: 10px 0;
+  }
+  .sm-logo {
+    position: absolute;
+    left: 45px;
+    top: 25px;
+    width: 280px;
+    @include breakpoint(1270px) {
+      left: 35px;
+    }
+    @include breakpoint(870px) {
+      left: 25px;
     }
   }
-  li {
-    display: inline-block;
-    margin: 0 40px 0 0;
-    @include breakpoint(420px) {
-      margin: 0 20px 0 0;
-    }
-    @include breakpoint(380px) {
-      margin: 0 15px 0 0;
-      font-size: 80%;
-    }
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-  a {
-    color: $color1;
-    font-family: $font-2;
-    text-transform: lowercase;
-    font-size: 1.25em;
-    letter-spacing: 2px;
+  .logo {
+    width: 270px;
+    display: block;
     transition: $dt;
+  }
+  .subhead {
+    margin-bottom: 10px;
+    padding-top: 10px;
     text-transform: uppercase;
-    &:hover {
-      color: $color2;
+    font-size: .875em;
+  }
+  &.active {
+    .main-header__menu {
+      background: none;
+      top: 15px;
+      right: 10px;
+    }
+    .main-header__content {
+      display: block;
+      @include animated(.5s);
+      @include fadeInRight;
+    }
+    .menu {
+      background: none;
+      span {
+        background: rgba(0,0,0,0);
+        &:before {
+          transform: rotate(-45deg) scale(1);
+          top: 0px;
+          background: $white;
+        }
+        &:after {
+          transform: rotate(45deg) scale(1);
+          top: 0px;
+          background: $white;
+        }
+      }
+    }
+  }
+  &__menu {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0px;
+    top: 0;
+    z-index: 100;
+    background: $color1;
+    .menu {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      z-index: 100;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        position: relative;
+        background: #fff;
+        text-indent: -9999em;
+        top: 0px;
+        transition: $dt;
+        &:after,
+        &:before {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: #fff;
+          position: absolute;
+          transition: $dt;
+          backface-visibility: hidden;
+          right: 0;
+        }
+        &:after {
+          top: -7px;
+        }
+        &:before {
+          bottom: -7px;
+        }
+      }
+    }
+  }
+  .close {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+    background: rgba(0,0,0,.6);
+    @include animated(.5s);
+    @include fadeIn;
+  }
+  &__content {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 660px;
+    max-width: 100%;
+    padding: 40px 50px;
+    padding-left: 120px;
+    background: $color1;
+    color: #fff;
+    box-shadow: $shadow;
+    z-index: 2;
+    display: none;
+    transition: $dt;
+    @include breakpoint(800px) {
+      width: 400px;
+      padding-left: 40px;
+    }
+    .greeting {
+      border-color: #fff;
+      width: 100px;
+      @include animated(.375s);
+      @include fadeInDown;
+      animation-delay: .2s;
+    }
+    nav {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      position: relative;
+      &:before {
+        content: '';
+        width: 100px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      li {
+        margin-bottom: 20px;
+        @include animated(.375s);
+        @include fadeInLeft;
+        &:nth-of-type(2n) {
+          animation-delay: .1s;
+        }
+        &:nth-of-type(3n) {
+          animation-delay: .2s;
+        }
+        &:nth-of-type(4n) {
+          animation-delay: .3s;
+        }
+        &:nth-of-type(5n) {
+          animation-delay: .4s;
+        }
+        &.current-menu-item {
+          a {
+            &:before {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+      a {
+        position: relative;
+        font-family: $font-2;
+        font-size: 2.5em;
+        color: #fff;
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+          }
+        }
+        &:before {
+          content: '';
+          width: 106%;
+          height: 17px;
+          background: $color2;
+          bottom: 8px;
+          left: -3%;
+          position: absolute;
+          z-index: -1;
+          transition: $dt;
+          transform: scaleX(0);
+        }
+      }
+    }
+    .inline {
+      @include animated(.375s);
+      @include fadeInUp;
+      animation-delay: .2s;
+      .b-social {
+        fill: #fff;
+      }
+      a {
+        &:hover {
+          .a-menu {
+            fill: #fff;
+          }
+        }
+      }
+      li {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        margin-right: 20px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+    @include breakpoint(700px, max-height) {
+      nav {
+        a {
+          font-size: 2em;
+        }
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    @include breakpoint(530px, max-height) {
+      nav {
+        a {
+          font-size: 1.5em;
+        }
+      }
     }
   }
 }

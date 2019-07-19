@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>{{ page.title }}</title>
+    <meta name="description" content="Specializing in high quality JDM stickers and accessories." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+    <link href="https://fonts.googleapis.com/css?family=Anton|Source+Sans+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/application.css?v=01264">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/resources/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/resources/favicon-16x16.png">
+    <link rel="manifest" href="assets/resources/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/resources/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  {% include header2.html %}
+  <body class="{{ page.class }}">
+
+    {{ site.baseurl }}
+
+    {{ content }}
+
+    {% include footer.html %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="assets/js/application-vendor.js"></script>
+    <script type="text/javascript" src="assets/js/application.js?v=0126"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131728599-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131728599-1');
+    </script>
+  </body>
+</html>
