@@ -35,6 +35,10 @@
       }
       @include breakpoint(500px) {
         font-size: .875em;
+        padding: 0 5px;
+      }
+      @include breakpoint(400px) {
+        font-size: .75em;
       }
     }
   }
