@@ -69,6 +69,14 @@
     top: 0;
     z-index: 100;
     background: $color1;
+    strong {
+      position: fixed;
+      color: #fff;
+      font-size: .75em;
+      text-transform: uppercase;
+      right: 0;
+      top: 10px;
+    }
     .menu {
       width: 20px;
       height: 20px;
